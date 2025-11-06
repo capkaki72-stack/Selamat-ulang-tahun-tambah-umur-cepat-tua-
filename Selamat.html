@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selamat Ulang Tahun 🎂</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #ffccff, #ffe6cc);
+      text-align: center;
+      font-family: "Comic Sans MS", cursive;
+      overflow: hidden;
+    }
+
+    h1 {
+      color: #ff0066;
+      font-size: 2.5em;
+      animation: bounce 1.5s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .cake {
+      position: relative;
+      width: 200px;
+      height: 150px;
+      margin: 50px auto;
+    }
+
+    .layer {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .layer1 {
+      bottom: 0;
+      height: 60px;
+      background: #ff99cc;
+    }
+
+    .layer2 {
+      bottom: 60px;
+      height: 50px;
+      background: #ffb3d9;
+    }
+
+    .layer3 {
+      bottom: 110px;
+      height: 40px;
+      background: #ffe6f0;
+    }
+
+    .candle {
+      position: absolute;
+      top: -40px;
+      left: 50%;
+      width: 10px;
+      height: 40px;
+      background: #ffff99;
+      transform: translateX(-50%);
+    }
+
+    .flame {
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      width: 10px;
+      height: 10px;
+      background: orange;
+      border-radius: 50%;
+      transform: translateX(-50%);
+      animation: flicker 0.3s infinite alternate;
+    }
+
+    @keyframes flicker {
+      0% { opacity: 0.7; transform: translateX(-50%) scale(1); }
+      100% { opacity: 1; transform: translateX(-50%) scale(1.3); }
+    }
+
+    .balloon {
+      position: absolute;
+      width: 40px;
+      height: 50px;
+      background: red;
+      border-radius: 50%;
+      animation: fly 6s linear infinite;
+    }
+
+    @keyframes fly {
+      0% { transform: translateY(100vh); }
+      100% { transform: translateY(-150px); }
+    }
+
+    audio {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎉 Selamat Ulang Tahun 🎉</h1>
+  <h2>Semoga panjang umur dan banyak bahagia! 🥳</h2>
+
+  <div class="cake">
+    <div class="layer layer1"></div>
+    <div class="layer layer2"></div>
+    <div class="layer layer3"></div>
+    <div class="candle">
+      <div class="flame"></div>
+    </div>
+  </div>
+
+  <div class="balloon" style="left:10%; background: pink; animation-delay: 0s;"></div>
+  <div class="balloon" style="left:40%; background: lightblue; animation-delay: 2s;"></div>
+  <div class="balloon" style="left:70%; background: yellow; animation-delay: 4s;"></div>
+
+  <audio controls autoplay loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    Browser kamu tidak mendukung audio.
+  </audio>
+</body>
+</html>
